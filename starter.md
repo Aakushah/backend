@@ -8,6 +8,7 @@
 
 #nodemon dev dependeny
  npm i -D nodemon
+ npm i -D prettier
 
     script {"dev" : "nodemon src/index.js"}
 
