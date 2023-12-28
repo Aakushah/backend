@@ -1,0 +1,14 @@
+{
+  "name": "youtubeclone",
+  "version": "1.0.0",
+  "description": "learn backend by doing project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Aakash Prasad Sah",
+  "license": "ISC"
+}
