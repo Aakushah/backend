@@ -8,4 +8,12 @@
 
 #nodemon dev dependeny
  npm i -D nodemon
-  script {"dev" : "nodemon src/index.js"}
+
+    script {"dev" : "nodemon src/index.js"}
+
+#shortcut trick for linux
+  creating single or multiple files:touch filename filename
+  creating folder: mkdir
+
+
+
