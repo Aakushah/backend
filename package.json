@@ -2,13 +2,17 @@
   "name": "youtubeclone",
   "version": "1.0.0",
   "description": "learn backend by doing project",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev" : "nodemon src/index.js"
   },
   "keywords": [
     "backend"
   ],
   "author": "Aakash Prasad Sah",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
 }
