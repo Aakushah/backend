@@ -20,6 +20,10 @@
 
 #dependency
  npm i mongoose express dotenv
+ npm i cookie-parser cors
+ npm i mongoose-paginate-v2
+ npm i bcrypt jsonwebtoken
+ 
 
 #shortcut trick for linux
   creating single or multiple files:touch filename filename
