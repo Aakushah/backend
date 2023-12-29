@@ -1,9 +1,12 @@
 import dotenv from 'dotenv';
 import connectDB from './db/index.js';
+
 import {app} from './app.js'
+
 dotenv.config({
     path:'./env'
 })
+
 
 
 connectDB()
@@ -20,6 +23,10 @@ connectDB()
     console.log("MONGODB CONNECTION FAILED !!! ",error);
 })
 
+
+app.post('/api/v1/users/register',(req,res) => {
+    res.send("hello")
+})
 
 
 

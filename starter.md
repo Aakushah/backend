@@ -25,6 +25,10 @@
  npm i bcrypt jsonwebtoken
  
 
+#install some other services
+  npm install cloudinary
+  npm install multer
+
 #shortcut trick for linux
   creating single or multiple files:touch filename filename
   creating folder: mkdir
