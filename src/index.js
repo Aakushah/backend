@@ -4,7 +4,7 @@ import connectDB from './db/index.js';
 import {app} from './app.js'
 
 dotenv.config({
-    path:'./env'
+    path:'./.env'
 })
 
 
@@ -22,13 +22,6 @@ connectDB()
 .catch((error) => {
     console.log("MONGODB CONNECTION FAILED !!! ",error);
 })
-
-
-app.post('/api/v1/users/register',(req,res) => {
-    res.send("hello")
-})
-
-
 
 
 

@@ -1,10 +1,10 @@
-import mongoose from "mongoose";
+import mongoose, { Schema }  from "mongoose";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
 
 const userSchema= new mongoose.Schema({
-    username:{
+    userName:{
         type:String,
         required:true,
         unique:true,
@@ -19,13 +19,13 @@ const userSchema= new mongoose.Schema({
         lowerCase:true,
         trim:true,
     },
-    fullname:{
+    fullName:{
         type:String,
         required:true,
         trim:true,
         index:true,
     },
-    avtar:{
+    avatar:{
         //cloudnary url
         type:String,
 
@@ -52,7 +52,7 @@ const userSchema= new mongoose.Schema({
 
 userSchema.pre("save", async function(next){
     if( ! this.isModified("password")) return next();
-    this.password=bcrypt.hash(this.password,8);
+    this.password=await bcrypt.hash(this.password,8);
     next();
 })
 
@@ -65,8 +65,8 @@ userSchema.methods.generateAccessToken= async function(){
         {
             _id:this._id,
             email:this.email,
-            username:this.username,
-            fullname:this.fullname,
+            userName:this.userName,
+            fullName:this.fullName,
         },
         process.env.ACCESS_TOKEN_SECRET,
         {
